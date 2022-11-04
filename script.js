@@ -1,4 +1,6 @@
 let randomNumber = 0
+let myPoints=document.getElementsByClassName("item4")[0]
+let yourPoints=document.getElementsByClassName("item5")[0]
 
 
 
@@ -17,14 +19,17 @@ function rock() {
     }
     if (randomNumber === 2 ){
         console.log("you win,rock beat scissor")
+        myPoints = 0
+        myPoints += 1 
+        myPoints.innerHTML = myPoints
+        
     } else if(randomNumber === 1){
         console.log("you lose, paper beat rock")
-       
+        
     } else {
         console.log("It's a tie")
     
     }
-    return
 }
 
 function paper() {
@@ -72,10 +77,6 @@ function scissor() {
         console.log("It's a tie")
     }
 }
-
-const myPoints = document.getElementById("4");
-myPoints.innerText = "ASdasd"
-
 
 
 
