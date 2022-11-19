@@ -1,12 +1,22 @@
 let randomNumber = 0
-let myPoints=document.getElementsByClassName("item4")[0]
-let yourPoints=document.getElementsByClassName("item5")[0]
-
-
-
+let myPoints = 0
+let yourPoints = 0
+const scoreInfo=document.getElementById("scoreInformation")
+const myPointsPara=document.getElementById("myPoints")
+const yourPointsPara=document.getElementById("yourPoints")
+const endgameModal = document.getElementById('endgameModal')
+const endgameMsg = document.getElementById('endgameMsg')
+const restarts = document.getElementById('restart')
+function again(){
+    randomNumber = 0
+    myPoints = 0
+    yourPoints = 0
+    myPointsPara.innerHTML = 0
+    yourPointsPara.innerHTML = 0
+    scoreInfo.innerHTML = ""
+}
 function rock() {
     randomNumber = Math.floor(Math.random()*3)
-    console.log(randomNumber)
     if (randomNumber === 0){
         let randomNumber = "rock"
         console.log(randomNumber)
@@ -18,17 +28,23 @@ function rock() {
         console.log(randomNumber)
     }
     if (randomNumber === 2 ){
-        console.log("you win,rock beat scissor")
-        myPoints = 0
-        myPoints += 1 
-        myPoints.innerHTML = myPoints
+        scoreInfo.textContent="you win,rock beat scissor"
+        yourPoints++
+        yourPointsPara.innerHTML=yourPoints
         
     } else if(randomNumber === 1){
-        console.log("you lose, paper beat rock")
+        scoreInfo.textContent="you lose, paper beat rock"
+        myPoints++
+        myPointsPara.innerHTML=myPoints
+        
         
     } else {
-        console.log("It's a tie")
+        scoreInfo.textContent="It's a tie"
     
+    }
+    if (myPoints===3||yourPoints===3){
+        console.log("game over")   
+       
     }
 }
 
@@ -46,11 +62,21 @@ function paper() {
         console.log(randomNumber)
     }
     if (randomNumber === 2){
-        console.log("you lose,scissor beat paper")
+        scoreInfo.textContent="you lose,scissor beat paper"
+        myPoints++
+        if (myPoints===3||yourPoints===3){
+            console.log("game over")
+        }
+        myPointsPara.innerHTML=myPoints
     } else if(randomNumber === 0){
-        console.log("you win,paper beat rock")
+        scoreInfo.textContent="you win,paper beat rock"
+        yourPoints++
+        if (myPoints===3||yourPoints===3){
+            console.log("game over")
+        }
+        yourPointsPara.innerHTML=yourPoints
     } else{
-        console.log("It's a tie")
+        scoreInfo.textContent="It's a tie"
     }
 
 }
@@ -69,15 +95,26 @@ function scissor() {
         console.log(randomNumber)
     }
     if (randomNumber === 0){
-        console.log("you lose")
-        console.log("rock beat scissor")
+        scoreInfo.textContent="you lose,rock beat scissor"
+        myPoints++
+        if (myPoints===3||yourPoints===3){
+            console.log("game over")
+        }
+        myPointsPara.innerHTML=myPoints
+     
     }else if (randomNumber===1){
-        console.log("you win, scissor beat paper")
+        scoreInfo.textContent="you win, scissor beat paper"
+        yourPoints++
+        if (myPoints===3||yourPoints===3){
+            console.log("game over")
+        }
+        yourPointsPara.innerHTML=yourPoints
     }else {
-        console.log("It's a tie")
+        scoreInfo.textContent="It's a tie"
     }
 }
 
+  
 
 
 

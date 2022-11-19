@@ -28,4 +28,8 @@
 .rock {font-size: 30px;}
 .paper {font-size: 30px;}
 .scissor {font-size: 30px;}
-
+.start {
+  font-size: 30px;
+  text-align: center;
+  background-color: cyan;
+}
