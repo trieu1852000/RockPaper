@@ -1,4 +1,4 @@
-   let randomNumber = 0
+let randomNumber = 0
 let myPoints = 0
 let yourPoints = 0
 const scoreInfo=document.getElementById("scoreInformation")
@@ -130,6 +130,6 @@ function scissor() {
 
 
 
-123123123
+
 
 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <h1>Welcome</h1>
+    <h2>Play 5 game to win</h2>
+    <button class="start" id="restart" onclick="again()">Start</button>
+    <div class="grid-container">
+        <div class="item1">Try to beat me</div>
+        <div class="item2">You</div>
+        <div class="item3">Me</div>  
+        <div class="item4" id="myPoints"></div>
+        <div class="item5" id="yourPoints"></div>
+        <div class="item6"><button class="rock" onclick="rock()" >Rock</button></div>
+        <div class="item7"><button class="paper" onclick="paper()">Paper</button></div>
+        <div class="item8"><button class="scissor" onclick="scissor()">Scissor</button></div>
+        
+      </div>
+     
+    <h2 id="scoreInformation"></h2>
+    <h1 id="finish"></h1>
+   
+</body>
+<script src ="script.js"></script>
+</html>
