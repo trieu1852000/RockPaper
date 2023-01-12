@@ -1,4 +1,4 @@
-.item1 { grid-area: header; }
+.item1 { grid-area: header;}
 .item2 { grid-area: menu; }
 .item3 { grid-area: main; }
 .item4 { grid-area: right; }
@@ -6,6 +6,19 @@
 .item6 { grid-area: Rock;}
 .item7 { grid-area: Paper;}
 .item8 { grid-area: Scissor;}
+.welcomes {
+  display: flex;
+  justify-content: center;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 50px;
+  color: rgb(84, 238, 205);
+}
+.score {
+  display: flex;
+  justify-content: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(240, 237, 97);
+}
 
 .grid-container {
   display: grid;
@@ -14,22 +27,49 @@
     'main main main right right right'
     'menu menu menu footer footer footer'
     'Rock Rock Paper Paper Scissor Scissor';
-  gap: 5px;
-  background-color: #2196F3;
-  padding: 5px;
+  
+  
+  
 }
 
 .grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
+  
   text-align: center;
   padding: 20px;
-  font-size: 30px;
+  font-size: 50px;
+  font-family: fantasy;
+  color: rgb(240, 237, 97);
+  background: rgba(255, rgb(27, 204, 195), rgb(204, 65, 41), .5);
 }
-.rock {font-size: 30px;}
-.paper {font-size: 30px;}
-.scissor {font-size: 30px;}
-.start {
-  font-size: 30px;
-  text-align: center;
-  background-color: cyan;
+.rock img{
+
+  width: 150px;
+  height: auto;
+}
+.paper img{
+  width: 150px;
+  height: auto;
+}
+.scissor img{
+  width: 200px;
+  height: auto;
+}
+
+.imgStart {
+  display: flex;
+  justify-content: center;
+  color: rgb(37, 192, 166);
+
+}
+.finish {
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+  color: rgb(240, 232, 121);
+}
+.again{
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  color: rgb(24, 235, 17);
 }

@@ -6,8 +6,11 @@ const myPointsPara=document.getElementById("myPoints")
 const yourPointsPara=document.getElementById("yourPoints")
 const endgameModal = document.getElementById('endgameModal')
 const endgameMsg = document.getElementById('endgameMsg')
-const restarts = document.getElementById('restart')
+const playAgain = document.getElementById('again')
 const result = document.getElementById('finish')
+
+
+
 function again(){
     randomNumber = 0
     myPoints = 0
@@ -16,7 +19,8 @@ function again(){
     yourPointsPara.innerHTML = 0
     scoreInfo.innerHTML = ""
     result.innerHTML = ""
-    restarts.innerHTML = "Start"
+    playAgain.innerHTML=""
+    
 }
 function rock() {
     randomNumber = Math.floor(Math.random()*3)
@@ -31,7 +35,7 @@ function rock() {
         console.log(randomNumber)
     }
     if (randomNumber === 2 ){
-        scoreInfo.textContent="You win!you chose rock and I chose scissor"
+        scoreInfo.textContent="You win!You chose rock and I chose scissor"
         yourPoints++
         yourPointsPara.innerHTML=yourPoints
         
@@ -44,13 +48,13 @@ function rock() {
     }
   
         if (myPoints === 5){
-            result.textContent="GAME OVER. You lose"
-            restarts.textContent = "RESTART"
-    
+            result.textContent="GAME OVER. Don't be mad :)"
+            playAgain.textContent = "Click start to play again"
+        
         } 
         if(yourPoints === 5){
-            result.textContent="GAME OVER. Congratulation! You are the winner!"
-            restarts.textContent = "RESTART"
+            result.textContent="You won! Hm...You lucky this time."
+            playAgain.textContent = "Click start to play again"
         }
        
     }
@@ -81,12 +85,12 @@ function paper() {
         scoreInfo.textContent="It's a tie! You and I chose paper"
     }
     if (myPoints === 5){
-        result.textContent="GAME OVER. You lose"
-        restarts.textContent = "RESTART"
+        result.textContent="GAME OVER. Loserrrrrrr"
+        playAgain.textContent = "Click start to play again"
     } 
     if(yourPoints === 5){
-        result.textContent="GAME OVER. Congratulation! You are the winner!"
-        restarts.textContent = "RESTART"
+        result.textContent="Congratulation! You are the winner!"
+        playAgain.textContent = "Click start to play again"
     }
 
 }
@@ -119,12 +123,12 @@ function scissor() {
         scoreInfo.textContent="It's a tie! You and I chose scissor"
     }
     if (myPoints === 5){
-        result.textContent="GAME OVER. You lose"
-        restarts.textContent = "RESTART"
+        result.textContent="GAME OVER. You so bad :("
+        playAgain.textContent = "Click start to play again"
     } 
     if(yourPoints === 5){
-        result.textContent="GAME OVER. Congratulation! You are the winner!"
-        restarts.textContent = "RESTART"
+        result.textContent="Wowwww, You won!!!"
+        playAgain.textContent = "Click start to play again"
     }
 }
 
